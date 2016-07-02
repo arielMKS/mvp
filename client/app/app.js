@@ -29,7 +29,7 @@ angular.module('app', [])
       return $http ({
         method: 'GET',
         // url: 'api/links',
-        url: 'http://api.football-data.org/v1/competitions/394/teams',
+        url: 'https://api.football-data.org/v1/competitions/394/teams',
         headers: {
           'X-Auth-Token': "6dbf7da93556476fa7ef33c83a6bbc74"
         }
