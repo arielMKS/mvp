@@ -10,7 +10,7 @@ app.set('port', 8080); //process.env.PORT || 1337
 // everything inside client is public
 app.use(express.static('./client')); // from server.js go to client folder
 
-app.listen(app.get('port'), function() {
+app.listen(process.env.PORT || app.get('port'), function() {
   console.log('Express server listening on port ', app.get('port'));
 })
 
