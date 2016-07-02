@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+  <script src='../app/app.js' > </script>
+<link rel="stylesheet" />
+
+</head>
+
+<body ng-app='app'>
+  <h1>European Football League</h1>
+
+  <div ng-controller="controller">
+     <div ng-repeat="team in teams">
+     <img ng-click="getPlayers(this)" ng-src="{{team.crestUrl}}" height="42" width="42"/> {{team.name}}
+       <div ng-repeat="player in players">
+         <ul>
+           <li>Player Name:{{player.name}}</li>
+           <li>Nationality:{{player.nationality}}</li>
+           <li>Position:{{player.position}}</li>
+         </ul>
+       </div>
+<div>
+
+       <table>
+         <head>
+           <tr>
+             <th>Player Name</th>
+             <th>Nationality</th>
+             <th>Position</th>
+           </tr>
+         </head>
+         <tbody>
+           <tr ng-repeat="player in players">
+             <td>{{player.name}}</td>
+             <td>{{player.nationality}}</td>
+             <td>{{player.position}}</td>
+
+
+           </tr>
+         </tbody>
+
+       </table>
+</div>
+
+
+     </div>
+
+  </div>
+
+</body>
+</html>

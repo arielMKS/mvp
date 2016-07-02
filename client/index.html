@@ -8,11 +8,22 @@
 </head>
 
 <body ng-app='app'>
-  <h1>European Football</h1>
+<div>
+  <h1>European Football League</h1>
+  <h6>-click logo for team roster-</h6>
+</div>
 
   <div ng-controller="controller">
      <div ng-repeat="team in teams">
-     <img src="{{team.crestUrl}}" height="42" width="42"/> {{team.name}}
+     <img class="teamLogo" ng-click="getPlayers(this)" ng-src="{{team.crestUrl}}" height="42" width="42"/> <strong> {{team.code}} - {{team.name}} </strong>
+
+       <div ng-if="team.code === 'FCB'" ng-repeat="player in players">
+         <ul>
+           <li>Player Name:    {{player.name}}</li>
+           <li>Nationality:    {{player.nationality}}</li>
+           <li>Position:     {{player.position}}</li>
+         </ul>
+       </div>
      </div>
 
   </div>
