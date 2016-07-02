@@ -1,0 +1,20 @@
+{
+  "name": "mvp",
+  "version": "0.0.0",
+  "homepage": "https://github.com/arielMKS/mvp",
+  "authors": [
+    "MKS-students <mks.students@hackreactor.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.5.7",
+    "angular-material": "~1.0.9"
+  }
+}
